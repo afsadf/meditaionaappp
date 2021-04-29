@@ -7,10 +7,20 @@
 
 import UIKit
 import Alamofire
-import swiftyJSON
+import SwiftyJSON
 
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "yavdetskomsadu", for: indexPath )
+     
+        return cell
+    }
+    
     @IBOutlet weak var userPictures: UIImageView!
 
     override func viewDidLoad() {
